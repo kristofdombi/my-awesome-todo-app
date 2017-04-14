@@ -1,0 +1,47 @@
+#todo {
+  width: 80%;
+  margin: 0 auto;
+  padding: 5%;
+  min-height: 400px;
+  max-height: 800px;
+  border-radius: 3px;
+  text-align: left;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #fff;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding-bottom: 0.5rem;
+}
+
+.unfinished-items,
+.done-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  transition: .5s;
+}
+
+.unfinished-item,
+.done-item {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 0 10px 0;
+}
+
+.done-item {
+  color: rgba(255,255,255,0.8);
+  text-decoration: line-through;
+}

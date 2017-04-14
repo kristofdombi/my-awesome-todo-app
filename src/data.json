@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Venni tejet",
+    "isDone": false
+  },
+  {
+    "name": "Kidobni a szemetet",
+    "isDone": false
+  },
+  {
+    "name": "Kifizetni a szamlakat",
+    "isDone": false
+  },
+  {
+    "name": "Megenni a szolot",
+    "isDone": true
+  },
+  {
+    "name": "Megvenni a dinnyet",
+    "isDone": true
+  },
+  {
+    "name": "Repulni Gorogorszagba",
+    "isDone": true
+  },
+  {
+    "name": "Korbe utazni a foldet",
+    "isDone": false
+  }
+]
