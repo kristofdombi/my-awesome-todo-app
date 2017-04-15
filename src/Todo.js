@@ -12,15 +12,21 @@ class Todo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      listItems: data
+      listItems: []
     };
+  }
+
+  componentWillMount() {
+    this.setState({
+      listItems: data
+    });
   }
 
   handleListChange(clickedItem) {
     clickedItem.isDone = !clickedItem.isDone;
     this.setState((clickedItem) => {
       this.state.listItems.reduce((prev, next) => {
-        if (next === clickedItem) {
+        if (next.name === clickedItem.name) {
           next = clickedItem;
         }
         return (
