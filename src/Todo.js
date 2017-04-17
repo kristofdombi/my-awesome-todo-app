@@ -36,11 +36,21 @@ class Todo extends Component {
     });
   }
 
+  handleListInputChange(newItem) {
+    this.setState({
+      listItems: this.state.listItems.concat(newItem)
+    });
+  }
+
   render() {
     return (
       <div id="todo">
         <div className="header">My awesome todo app</div>
-        <List listItems={ this.state.listItems } onChange={ this.handleListChange.bind(this) }/>
+        <List
+          listItems={ this.state.listItems }
+          onChange={ this.handleListChange.bind(this) }
+          onInputChange={ (newItem) => this.handleListInputChange(newItem) }
+        />
       </div>
     );
   }

@@ -6,11 +6,15 @@ class ListInput extends Component {
   render() {
     return (
       <div className="input-wrapper">
-        <div className="add">+</div>
+        <div
+          className="add"
+          onClick={ this.props.onClick }
+        >+</div>
         <input
           type="text"
           placeholder="Add an item here"
           className="input"
+          onChange={ (e) => this.props.onChange(e) }
         />
       </div>
     )
