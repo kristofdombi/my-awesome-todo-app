@@ -3,12 +3,40 @@ import ListInput from './ListInput';
 
 class List extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      newItem: {}
+    };
+  }
+
+  handleListInputChange(e) {
+    const newItem = {
+      name: e.target.value,
+      isDone: false
+    };
+    if (e.target.value) {
+      this.setState({
+        newItem: newItem
+      });
+    }
+  }
+
+  handleListInputClick() {
+    if (this.state.newItem) {
+      this.props.onInputChange(this.state.newItem);
+    }
+  }
+
   render() {
     return (
       <div>
         <div>
           <p>Unfinished tasks</p>
-          <ListInput />
+          <ListInput
+            onChange={ (e) => this.handleListInputChange(e) }
+            onClick={ this.handleListInputClick.bind(this) }
+          />
           <ul className="unfinished-items">
             {
               this.props.listItems.filter(filteredItem => !filteredItem.isDone).map((item, i)=>(
